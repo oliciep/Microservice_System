@@ -1,0 +1,8 @@
+Skeleton code
+1. Handler starts listening on port 3002
+2. Search microservices starts listening
+3. Tracks microservices starts listening
+4. Receive POST request, with Audio fragment
+5. Send post request to Search microservice to retrieve ID of track
+6. Retrieve audio from tracks service
+7. Audio is returned

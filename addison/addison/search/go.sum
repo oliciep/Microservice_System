@@ -1,0 +1,9 @@
+github.com/AudDMusic/audd-go v0.2.5 h1:t1h4Gw1LntcR1ySpC2Kq9W9rTK/XVgHUwKstRkQc3lI=
+github.com/AudDMusic/audd-go v0.2.5/go.mod h1:dCMyo6NXmoFxUNUAZv3Aq3GZm9EzzFrbqobt6fSipUk=
+github.com/gofrs/uuid v4.0.0+incompatible/go.mod h1:b2aQJv3Z4Fp6yNu3cdSllBxTCLRxnplIgP/c0N/04lM=
+github.com/gofrs/uuid v4.4.0+incompatible h1:3qXRTX8/NbyulANqlc0lchS1gqAVxRgsuW1YrTJupqA=
+github.com/gofrs/uuid v4.4.0+incompatible/go.mod h1:b2aQJv3Z4Fp6yNu3cdSllBxTCLRxnplIgP/c0N/04lM=
+github.com/gorilla/mux v1.8.0 h1:i40aqfkR1h2SlN9hojwV5ZA91wcXFOvkdNIeFDP5koI=
+github.com/gorilla/mux v1.8.0/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
+github.com/jcuga/golongpoll v1.3.0 h1:00lQC7C1a/4YcGnWcdWi1YzJYfat1Hal2+Cnlvgyado=
+github.com/jcuga/golongpoll v1.3.0/go.mod h1:1ijFh83w68ylU44F+xSEyrXChP/7NnoAvgCVHWMggWA=
