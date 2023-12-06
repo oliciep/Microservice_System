@@ -11,6 +11,11 @@ This project is a Golang based microservices application utilising the Audd.io A
 - Function to store track in database.
 - Function to find track in database based on snippet.
 
+## Deployment
+Deploy this project in a shell environment, by navigating into the directory and using the commands:
+```bash
+  ./scriptX.sh
+```
 
 ## Acknowledgements
 I used the following website to retrieve my API requests:
