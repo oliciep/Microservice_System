@@ -9,5 +9,5 @@ import (
 
 // Main function starts listening on port 3001
 func main() {
-	log.Fatal(http.ListenAndServe(":3001", resources.Router()))
+	log.Fatal(http.ListenAndServe(":3001", resources.Router())) 
 }
