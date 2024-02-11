@@ -61,7 +61,7 @@ func searchTrack(w http.ResponseWriter, r *http.Request) {
 }
 
 func matchMetadata(sampleMetadata repository.Metadata) (string, bool) {
-	// get list of files from tracks service and store in array
+	// Get list of files from tracks service and store in array
 	resp, err := http.Get("http://localhost:3000/tracks")
 	if err != nil {
 		panic("matchMetadata, Error in listening to tracks microservice:" + err.Error())
@@ -71,9 +71,9 @@ func matchMetadata(sampleMetadata repository.Metadata) (string, bool) {
 		panic("matchMetadata, Error in json decoding:" + err.Error())
 	}
 	log.Println("matchMetadata: List is: ", list)
-   	// loop through each ID
+   	// Loop through each ID in the list of tracks
 	for i, id := range list {
-		// request track from tracks service
+		// Request track from the tracks service
 		resp, err := http.Get("http://localhost:3000/tracks/" + id)
 		if err != nil {
 			panic("matchMetadata, Error in get request:" + err.Error())
@@ -82,10 +82,10 @@ func matchMetadata(sampleMetadata repository.Metadata) (string, bool) {
 		if err := json.NewDecoder(resp.Body).Decode(&track); err != nil {
 			panic("matchMetadata, Error in json decoding: " + err.Error())
 		}
-		// call searchInAudd with this track
+		// Call searchInAudd with this track
 		log.Println("matchMetadata: searching for track", i, "[", track.Id, "]")
 		result := searchInAudd(track.Audio)
-   		// compare returned metadata to sampleMetadata and if they match return id of that track
+   		// Compare returned metadata to sampleMetadata and if they match return id of that track
 		if result == sampleMetadata {
 			log.Println("matchMetadata: track", i, "[", track.Id, "] matched")
 			return track.Id, true
@@ -93,7 +93,7 @@ func matchMetadata(sampleMetadata repository.Metadata) (string, bool) {
 			log.Println("matchMetadata: no match for", i, "[", track.Id, "]")
 		}		
 	}   	
-	// if we get to the end and no match is found, then false is returned
+	// If we get to the end and no match is found, then false is returned
 	return "", false
 }	
 
