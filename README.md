@@ -1,7 +1,7 @@
 # Microservice Application
 
 This project is a Golang based microservices application utilising the Audd.io API. The essential functions of the microservice are to store segments of audio tracks, search for these audio tracks, find audio tracks based on audio snippets and return the tracks stored.
-
+ 
 
 ## Features
 
