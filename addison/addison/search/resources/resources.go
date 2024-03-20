@@ -21,7 +21,7 @@ func searchInAudd(sample string) repository.Metadata {
 		panic("searchInAudd, Error in base64 decoding:" + errD.Error())
 	}
 	if err := os.WriteFile("test.wav", data, 0644); err != nil {
-		panic("searchInAudd, Error in writing file:" + err.Error())
+		panic("searchInAudd, Error in writing file:" +  err.Error())
 	}
 	client := audd.NewClient(KEY)
 	file, err := os.Open("test.wav")
@@ -30,7 +30,7 @@ func searchInAudd(sample string) repository.Metadata {
     	}
     	result, err := client.Recognize(file, "apple_music,spotify", nil)
     	if err != nil {
-        	panic("searchInAudd, Error occurred from Audd.io API:" + err.Error())
+        	panic("searchInAudd, Error occurred from the Audd.io API:" + err.Error())
     	}
 	p := repository.Metadata{Id: "", Title: result.Title, Artist: result.Artist}
 	log.Println("searchInAudd: done; sample length: ", len(sample))
@@ -64,7 +64,7 @@ func matchMetadata(sampleMetadata repository.Metadata) (string, bool) {
 	// Get list of files from tracks service and store in array
 	resp, err := http.Get("http://localhost:3000/tracks")
 	if err != nil {
-		panic("matchMetadata, Error in listening to tracks microservice:" + err.Error())
+		panic("matchMetadata, Error in listening to the tracks microservice:" + err.Error())
 	}
 	var list [] string
 	if err := json.NewDecoder(resp.Body).Decode(&list); err != nil {
